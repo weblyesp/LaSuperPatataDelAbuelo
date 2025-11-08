@@ -1,0 +1,224 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>La Súper Patata del Abuelo — Patatas Asadas</title>
+  <meta name="description" content="Venta ambulante de patatas asadas artesanales. Sabores caseros, ingredientes naturales y receta familiar.">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --brown-900:#3b2b22; /* oscuro */
+      --brown-700:#7a4f37; /* medio */
+      --brown-500:#b88964; /* claro */
+      --brown-300:#e8d7cc; /* muy claro */
+      --accent:#ffd27f;
+      --max-width:1100px;
+      --radius:14px;
+      font-family: 'Montserrat', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      color:var(--brown-900);
+      background: linear-gradient(180deg, #fffaf6 0%, #fff6f0 100%);
+    }
+    *{box-sizing:border-box}
+    body{margin:0;line-height:1.5}
+
+    .container{max-width:var(--max-width);margin:0 auto;padding:28px}
+
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:18px 0}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{width:64px;height:64px;border-radius:12px;background:linear-gradient(135deg,var(--brown-700),var(--brown-500));display:flex;align-items:center;justify-content:center;box-shadow:0 6px 18px rgba(59,43,34,0.12)}
+    .logo svg{width:36px;height:36px}
+    .brand h1{font-size:1.15rem;margin:0;color:var(--brown-900)}
+    .brand p{margin:0;font-size:.82rem;color:var(--brown-700)}
+
+    nav{display:flex;gap:12px;align-items:center}
+    .btn{background:transparent;border:1px solid transparent;padding:8px 12px;border-radius:10px;font-weight:600}
+    .btn-primary{background:var(--brown-700);color:white;border-color:var(--brown-700);box-shadow:0 6px 14px rgba(122,79,55,0.12)}
+    .btn-ghost{background:transparent;color:var(--brown-700)}
+
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin-top:18px}
+    .hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.7));padding:28px;border-radius:var(--radius);box-shadow:0 10px 30px rgba(59,43,34,0.06)}
+    .eyebrow{display:inline-block;padding:6px 10px;background:var(--brown-300);border-radius:999px;font-weight:700;color:var(--brown-900);font-size:.78rem}
+    .lead{font-size:1.6rem;color:var(--brown-900);margin:12px 0 6px}
+    .sub{color:var(--brown-700);margin:0 0 18px}
+    .highlights{display:flex;gap:12px;flex-wrap:wrap}
+    .chip{background:linear-gradient(180deg,var(--accent),#ffedbf);padding:8px 10px;border-radius:10px;font-weight:700}
+
+    .potato-image{width:100%;height:100%;min-height:260px;border-radius:var(--radius);background-image: url('https://images.unsplash.com/photo-1604908177522-8ba7f1d36b5b?auto=format&fit=crop&w=1200&q=60');background-size:cover;background-position:center;box-shadow:0 8px 28px rgba(59,43,34,0.12)}
+
+    /* Sections */
+    section{margin-top:26px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:white;padding:18px;border-radius:12px;border:1px solid rgba(59,43,34,0.04)}
+    .card h3{margin:0 0 8px}
+    .muted{color:var(--brown-700);font-size:.95rem}
+
+    /* Menu list */
+    .menu-list{display:flex;flex-direction:column;gap:12px}
+    .menu-item{display:flex;justify-content:space-between;align-items:center;padding:12px;border-radius:10px;background:linear-gradient(180deg, #fff, var(--brown-300));}
+    .price{font-weight:700}
+
+    /* Contact */
+    .contact-grid{display:grid;grid-template-columns:1fr 350px;gap:18px}
+    form{display:flex;flex-direction:column;gap:10px}
+    input, textarea{padding:10px;border-radius:10px;border:1px solid rgba(59,43,34,0.08)}
+    input[type="submit"]{cursor:pointer;border:none;padding:12px;font-weight:700;border-radius:10px}
+
+    footer{margin:36px 0 12px;padding-top:18px;border-top:1px solid rgba(59,43,34,0.04);color:var(--brown-700);font-size:.9rem}
+
+    /* Responsive */
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;}
+      .hero .potato-image{order:-1}
+      .grid-3{grid-template-columns:1fr}
+      .contact-grid{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo" aria-hidden>
+          <!-- simple potato icon -->
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+            <ellipse cx="12" cy="12" rx="8" ry="6" fill="#fff6ea" opacity="0.9"/>
+            <path d="M6 12c1.2-4 11-7 12-2 1 5-6 10-12 8-2-0.6-2-3-0-6z" fill="#7a4f37" opacity="0.95"/>
+          </svg>
+        </div>
+        <div>
+          <h1>La Súper Patata del Abuelo</h1>
+          <p>Patatas asadas artesanas — receta de la abuela</p>
+        </div>
+      </div>
+      <nav>
+        <button class="btn btn-ghost">Inicio</button>
+        <button class="btn btn-ghost">Menú</button>
+        <button class="btn btn-ghost">Contacto</button>
+        <button class="btn btn-primary">Pedidos</button>
+      </nav>
+    </header>
+
+    <main>
+      <div class="hero">
+        <div class="hero-card">
+          <span class="eyebrow">Ambulante • Hecho al carbón</span>
+          <h2 class="lead">La patata más reconfortante de la ciudad</h2>
+          <p class="sub">Receta familiar, papas seleccionadas y combustión tradicional para un sabor ahumado inconfundible. Perfecta para llevar y disfrutar.</p>
+
+          <div class="highlights" style="margin-bottom:16px">
+            <div class="chip">Ingredientes naturales</div>
+            <div class="chip">Receta casera</div>
+            <div class="chip">Opciones veganas</div>
+          </div>
+
+          <div class="grid-3">
+            <div class="card">
+              <h3>Horario</h3>
+              <p class="muted">Lun - Dom: 12:00 — 22:00 (según ubicación)</p>
+            </div>
+            <div class="card">
+              <h3>Localización</h3>
+              <p class="muted">Carrito ambulante — Revisa nuestras redes el día de hoy para ubicación exacta.</p>
+            </div>
+            <div class="card">
+              <h3>Especialidad</h3>
+              <p class="muted">Patata asada XL con mantequilla de ajo, queso fundido y cebollino.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="potato-image" role="img" aria-label="Patata asada caliente"></div>
+      </div>
+
+      <section id="menu">
+        <h2 style="margin-bottom:12px">Menú destacado</h2>
+        <div class="card menu-list">
+          <div class="menu-item">
+            <div>
+              <strong>Patata Clásica</strong>
+              <div class="muted">Mantequilla, sal marina y perejil</div>
+            </div>
+            <div class="price">4,50€</div>
+          </div>
+
+          <div class="menu-item">
+            <div>
+              <strong>Patata del Abuelo (estrella)</strong>
+              <div class="muted">Mantequilla de ajo casera, queso, bacon crujiente</div>
+            </div>
+            <div class="price">6,50€</div>
+          </div>
+
+          <div class="menu-item">
+            <div>
+              <strong>Patata Veggie</strong>
+              <div class="muted">Hummus, pico de gallo, cebollino</div>
+            </div>
+            <div class="price">5,50€</div>
+          </div>
+
+          <div class="menu-item">
+            <div>
+              <strong>Patata XL</strong>
+              <div class="muted">Todito: carnes, salsas y extras</div>
+            </div>
+            <div class="price">8,50€</div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about">
+        <h2>Sobre nosotros</h2>
+        <div class="card" style="margin-top:12px">
+          <p class="muted">Somos un pequeño puesto ambulante con una receta que viene de familia. Nuestra filosofía es simple: buenas patatas, fuego loco y cariño en cada paquete. Usamos ingredientes de proximidad y tratamos de reducir plásticos (envases compostables).</p>
+        </div>
+      </section>
+
+      <section id="contact">
+        <h2>Contacto & Pedidos</h2>
+        <div class="contact-grid">
+          <div>
+            <div class="card">
+              <h3>Teléfono</h3>
+              <p class="muted">+34 600 000 000</p>
+              <h3 style="margin-top:12px">Redes</h3>
+              <p class="muted">Instagram: <strong>@lasuperpatata</strong> • Facebook: <strong>LaSúperPatata</strong></p>
+              <h3 style="margin-top:12px">Notas</h3>
+              <p class="muted">Pedidos grandes con 24h de antelación. Para eventos y ferias, consulta disponibilidad.</p>
+            </div>
+          </div>
+
+          <div>
+            <div class="card">
+              <form onsubmit="event.preventDefault(); alert('Gracias — tu mensaje ha sido enviado (simulado).'); this.reset();">
+                <label for="name">Nombre</label>
+                <input id="name" name="name" placeholder="Tu nombre" required>
+
+                <label for="phone">Teléfono</label>
+                <input id="phone" name="phone" placeholder="Teléfono" required>
+
+                <label for="message">Mensaje / Pedido</label>
+                <textarea id="message" name="message" rows="4" placeholder="Dinos qué quieres..." required></textarea>
+
+                <input type="submit" value="Enviar pedido / consulta" style="background:var(--brown-700);color:white">
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+        <div>© <strong>La Súper Patata del Abuelo</strong> — Producto local y artesanal</div>
+        <div class="muted">Diseño sencillo • Colores marrones • Carrito ambulante</div>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
